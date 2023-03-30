@@ -15,12 +15,12 @@ const Shop = () => {
     }, []);
 
     useEffect(() =>{
-        const storedCart = getShoppingCart;
+        const storedCart = getShoppingCart();
         const savedCart  = [];
         // Step 1 : Get id
         for(const id in storedCart){
             // Step 2: Get the product by using id 
-            const addedProduct = products.find(product => product.id ===id);
+            const addedProduct = products.find(product => product.id === id);
             // Step 3: Add QUantity
         if(addedProduct){
             const quantity = storedCart[id];
@@ -34,7 +34,22 @@ const Shop = () => {
     },[products])
 
     const handleAddToCart = (product) =>{
-        const newCart = [...cart, product];
+
+        let newCart = [];
+
+        // const newCart = [...cart, product];
+
+        const exist = cart.find(pd => pd.id === product.id);
+        if(!exist){
+            product.quantity = 1;
+            newCart = [ ...cart, product ]
+        }
+        else{
+            exist.quantity = exist.quantity + 1;
+            const remaining = cart.filter(pd => pd.id !== product.id);
+            newCart = [...remaining, exist];
+        }
+
         setCart(newCart);
         addToDb(product.id)
     }
