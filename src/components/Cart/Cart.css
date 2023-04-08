@@ -6,6 +6,19 @@
 
 }
 
+
+.btn-clear-cart{
+    display: flex;
+    width: 90%;
+    height: 56px;
+    margin: 1px auto;
+    background-color:  #FF3030;
+    border-radius: 4px;
+    color: white;
+    justify-content: space-between;
+    font-size:  22px;
+    align-items: center;
+}
 .cart p{
     font-size: 17px;
 }
