@@ -1,3 +1,19 @@
 .review-container{
     margin: 60px auto;
 }
+.proceed-link{
+    text-decoration: none;
+}
+
+.btn-proceed-checkout{
+    display: flex;
+    width: 90%;
+    height: 56px;
+    margin: 1px auto;
+    background:  #FF9900;
+    border-radius: 4px;
+    color: white;
+    justify-content: space-between;
+    font-size:  16px;
+    align-items: center;
+}
