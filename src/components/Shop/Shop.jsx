@@ -37,9 +37,10 @@ const Shop = () => {
     }, [products])
 
     const handleAddToCart = (product) => {
-
+        
         let newCart = [];
 
+        // console.log(cart)
         // const newCart = [...cart, product];
 
         const exist = cart.find(pd => pd.id === product.id);
