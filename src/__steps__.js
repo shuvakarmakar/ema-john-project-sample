@@ -13,3 +13,15 @@
  * 4. set context value
  * 5. set the provider
  */
+
+/**
+ * HOSTING
+ * 1.npm install -g firebase-tools
+ * 2.firebase login
+ * 
+ * 
+ * For Each Project One Time
+ * 1. firebase init
+ * 2. Proceed
+ * 3. hosting : firebase (up and down arrow) hosting
+ */
